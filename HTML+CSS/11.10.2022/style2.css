@@ -1,0 +1,21 @@
+p::first-letter {
+    font-size: 200%;
+    color: red;
+    border-bottom: 1px solid red;
+}
+p:nth-child(3n+1)::after {
+    content: "- 🔴";
+}
+p:nth-child(3n+2)::after {
+    content: "- 🟡";
+}
+p:nth-child(3n)::after {
+    content: "- 🟢";
+}
+p:nth-child(2n) {
+    background-color: lightgray;
+}
+::selection {
+    background-color: aqua;
+}
+

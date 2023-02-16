@@ -1,0 +1,16 @@
+.animace {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    animation: jednorozec 5s 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 5;
+    animation-timing-function: cubic-bezier(.31,.62,.8,.38);
+    /* cubic-bezier.com */
+
+}
+@keyframes jednorozec {
+    20% {background-color: green;width: 550px;}
+    80% {background-color: yellow;width: 500px;}
+    100% {background-color: red;width: 350px;}
+}

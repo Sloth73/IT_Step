@@ -1,0 +1,3 @@
+propojení <scrip> - píše se před konec <body> -> prohlížeč jede od začátku, tak aby všechny elementy ke scriptování už byly na stránce
+na začátku - console.log("connected") -> zjišťuju, jestli je JS správně propojený se souborem HTML (každá funkce se vyvolává závorkami)
+funkce alert - chybová hláška (zastaralá), okno nejde zvětšit, nelze na ně použít CSS

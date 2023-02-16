@@ -1,0 +1,33 @@
+.container {
+    display:flex;
+    flex-direction: row;
+}
+.flex-item {
+    padding: 20px;
+    text-align: justify;
+    border: 1px solid black
+}
+.w-20 {
+    flex: 1;
+}
+.w-40 {
+    flex: 2;
+}
+.zluta {
+    background-color: yellow;
+}
+.cervena {
+    background-color: red;
+}
+.zelena {
+    background-color: green;
+}
+.zluta:hover, .cervena:hover, .zelena:hover {
+    background-color: rgb(38, 38, 38);
+    color: white;
+}
+@media screen and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+}

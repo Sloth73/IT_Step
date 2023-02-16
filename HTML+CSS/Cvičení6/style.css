@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: lightgray;
+}
+.svg {
+    border: 1px solid black;
+    background-color: lightgray;
+    width: 25%;
+    float: left;
+}
+
+.obd {
+    fill: white;
+}
+.polygon1 {
+    fill: rgb(17, 0, 203);
+}
+.polygon2 {
+    fill: red;
+}
+.polygon3 {
+    fill: rgb(34, 220, 34);
+}
+.polygon3:hover {
+    fill: lightgreen
+}
+.polyline {
+    fill: none;
+    stroke: black;
+    stroke-width: 3;
+}
+.obd1 {
+    fill: rgb(6, 97, 217);
+}
+.polygon4 {
+    fill: rgb(255, 228, 27);
+}
+.text {
+    stroke:black;
+    stroke-width: 2px;
+    font-size: 20px;
+}
+@media screen and (max-width:1000px) {
+    .svg {
+        width: 50%;
+    }
+}
+@media screen and (max-width:550px) {
+    .svg {
+        width: 100%;
+    }
+}

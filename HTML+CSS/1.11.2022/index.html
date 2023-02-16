@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SVG</title>
+</head>
+<body>
+    <h1>Seznámení s SVG</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos rem, suscipit accusantium, molestias voluptas culpa omnis dicta ratione praesentium, itaque ut fugit quis vero. Suscipit nam fugiat aspernatur corporis harum totam vero, ut, excepturi id modi saepe vitae distinctio. Optio adipisci quas voluptates dolore ad ipsam consequuntur eum sequi! Cumque provident quidem animi, modi corrupti cum alias ea culpa vitae placeat quo dolor eos mollitia dolorum ullam ratione beatae aut hic. Voluptas tenetur maxime magni fugit cum laborum inventore dolorum assumenda maiores recusandae repudiandae, sit, necessitatibus dolore. Doloremque ipsa neque, est, nemo sed iusto facilis corporis ea velit fugiat repellat eius nisi rerum, aut commodi dicta beatae itaque aperiam dolor nesciunt officiis nostrum quas unde. Delectus beatae dicta tenetur vitae consequatur, ipsa quibusdam, possimus adipisci quae nobis accusantium ipsam hic, suscipit cumque. Quos, nostrum magnam omnis eaque voluptas quaerat hic, sapiente quam aut quibusdam possimus repellat soluta beatae explicabo impedit!</p>
+    <h2>Jednotlivé SVG/XML tagy</h2>
+    <ul>
+        <li>obdélník - rectangle <code>&lt;rect&gt;</code></li>
+        <li>kruh - circle <code>&lt;circle&gt;</code></li>
+        <li>elipsa - ellipse <code>&lt;ellipse&gt;</code></li>
+        <li>úsečka - line <code>&lt;line&gt;</code></li>
+        <li>lomená úsečka - polyline <code>&lt;polyline&gt;</code></li>
+        <li>mnohoúhelník - polygon <code>&lt;polygon&gt;</code></li>
+    </ul>
+    <hr>
+    <h3>obdélník - rectangle <code>&lt;rect&gt;</code></h3>
+    <svg width="300px" height="300px" class="svg">
+        <rect width="300" height="50" x="0" y="125" class="obd1"/>
+        <rect width="50" height="300" x="125" y="0" class="obd1" transform="rotate(45,150,150)"/>
+        <rect width="50" height="300" x="125" y="0" class="obd1" transform="rotate(-45,150,150)"/>
+        <rect width="50" height="300" x="125" y="0" class="obd1" />
+    </svg>
+    <h3>kruh - circle <code>&lt;circle&gt;</code></h3>
+    <svg width="300px" height="300px" class="svg">
+        <circle cx="150" cy="150" r="100" class="kruh"/>
+    </svg>
+    <h3>elipsa - ellipse <code>&lt;ellipse&gt;</code></h3>
+    <svg width="300px" height="300px" class="svg">
+        <ellipse cx="150" cy="150" rx="100" ry="50" class="elipsa"/>
+    </svg>
+    <h3>lomená úsečka - polyline <code>&lt;polyline&gt;</code></h3>
+    <svg width="300px" height="300px" class="svg">
+        <polyline points="0,35 25,50 60,125 100,200"/>
+    </svg>
+    <h3>mnohoúhelník - polygon <code>&lt;polygon&gt;</code></h3>
+    <svg width="300px" height="300px" class="svg">
+        <polygon points="20,20 250,10 110,100 50,250 10,300" class="mnohouhelnik"/>   
+    </svg>
+</body>
+</html>

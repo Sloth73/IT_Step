@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS counter</title>
+    <style>
+        body {
+            counter-reset: nadpis1;
+        }
+        h1 {
+            counter-reset: nadpis2;
+        }
+        h2 {
+            counter-reset: nadpis3;
+        }
+        h1::before {
+            counter-increment: nadpis1;
+            content: counter(nadpis1) ". ";
+        }
+        h2::before {
+            counter-increment: nadpis2;
+            content: counter(nadpis1) ". " counter(nadpis2) ". ";
+        }
+        h3::before {
+            counter-increment: nadpis3;
+            content: counter(nadpis1) ". " counter(nadpis2)". " counter(nadpis3) ". ";
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>Živočichové</h1>
+    <h2>Ptáci</h2>
+    <h2>Savci</h2>
+    <h3>Hlodavci</h3>
+    <h3>Kytovci</h3>
+    <h3>Primáti</h3>
+    <h3>Šelmy</h3>
+    <h2>Ryby</h2>
+    <h2>Obojživelníci</h2>
+    <h2>Plazy</h2>
+
+    <h1>Rostliny</h1>
+    <h2>Plané</h2>
+    <h2>Užitkové</h2>
+    <h2>Okrasné</h2>
+
+    <h1>Houby</h1>
+    <h2>Jedlé</h2>
+    <h2>Nejedlé</h2>
+    <h2>Jedovaté</h2>
+</body>
+</html>

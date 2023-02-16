@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+.container {
+    background-color: rgb(209, 204, 204);
+    border-radius: 5px;
+    padding: 20px;
+}
+.col-35 {
+    width: 25%;
+    float: left;
+    margin-top: 8px;
+}
+.col-75 {
+    width: 75%;
+    float: left;
+    margin-top: 8px;
+}
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+input[type=submit] {
+    background-color: rgb(149, 147, 147);
+    padding: 12px;
+    border-radius: 5px;
+    float: right;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: rgb(84, 84, 84);
+    color:white;
+}
+/*Clearfix hack*/
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}

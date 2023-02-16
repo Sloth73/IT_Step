@@ -1,0 +1,26 @@
+.loader-spodni {
+    fill: none;
+    stroke: blue;
+    stroke-width: 10px;
+}
+.loader-vrchni {
+    fill: none;
+    stroke: lightblue;
+    stroke-width: 5px;
+    stroke-linecap: round;
+    animation: animace 1s cubic-bezier(1,1,1,1) infinite;
+}
+@keyframes animace {
+    0% {
+        stroke-dasharray: 60 379.6;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 219.8;
+        stroke-dashoffset: 219.8;
+    }
+    100% {
+        stroke-dasharray: 60 379.6;
+        stroke-dashoffset: 439.6;
+    }
+}

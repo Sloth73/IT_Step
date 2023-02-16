@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Responzivní formuláře</title>
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.2.1/classic/ckeditor.js"></script> 
+</head>
+<body>
+    <h2>Responzivní formuláře</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque reprehenderit provident aliquam, hic suscipit illum officia minima id autem neque, dolor cum delectus recusandae. Labore aliquam hic eveniet similique commodi pariatur ipsa sapiente repellendus consectetur, id mollitia dicta quod molestias officia ullam magnam laboriosam incidunt error architecto eius itaque debitis illum vero impedit. Amet qui totam minus tempore dolore, ab unde, corporis, blanditiis sunt voluptatem dolorum! Corrupti quia provident, sint dolorem maxime animi unde deleniti non, necessitatibus nulla facere quisquam esse possimus assumenda sapiente corporis aut eum, voluptatem iste. Neque repellendus tenetur inventore consectetur totam dolore ex ad aliquid, eum, corporis facilis amet voluptatem tempora temporibus exercitationem velit veniam maxime sint odio sapiente reprehenderit sed rem? Laboriosam reprehenderit totam a veritatis amet magni ipsum? Alias cumque illum labore. Ratione cumque quod ad earum repellendus expedita modi autem, aspernatur similique error, nesciunt beatae quibusdam ut maiores hic laudantium quo ullam eius.</p>
+    <div class="container">
+        <form>
+            <div class="row">
+                <div class="col-35">
+                    <label for="jmeno">Jméno:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="jmeno" placeholder="Zadejte křestní jméno">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-35">
+                    <label for="prijmeni">Příjmení:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="prijmeni" placeholder="Zadejte příjmení">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-35">
+                    <label for="destinace">Destinace:</label>
+                </div>
+                <div class="col-75">
+                    <select name="destinace" id="">
+                        <option value="x" selected disabled>(vyberte zemi)</option>
+                        <option value="cz">Česko</option>
+                        <option value="sk">Slovensko</option>
+                        <option value="at">Rakousko</option>
+                        <option value="it">Itálie</option>
+                        <option value="fr">Francie</option>
+                        <option value="ch">Švýcarsko</option>
+                        <option value="de">Německo</option>
+                        <option value="no">Norsko</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-35">
+                    <label for="text">Obsah sdělení:</label>
+                </div>
+                <div class="col-75">
+                    <textarea name="text" id="editor" ></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="Rezervovat">
+            </div>
+        </form>
+    </div>
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
+</body>
+</html>

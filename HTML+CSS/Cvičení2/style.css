@@ -1,0 +1,18 @@
+table {
+    border-collapse: collapse;
+}
+td {
+    border: 1px solid black;
+    text-align: center;
+    color: transparent;
+    height: 75px;
+    width: 75px;
+}
+.svetla {
+    background-color: rgb(250, 196, 95);
+}
+.tmava {
+    background-color: rgb(97, 55, 0);
+}
+
+

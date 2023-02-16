@@ -1,0 +1,22 @@
+.text {
+    border-bottom: 1px dotted black;
+    position: relative;
+}
+.text .vysvetlivka {
+    visibility: hidden;
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    width: 200px;
+    top: 120%;
+    left: 0%;
+    padding: 8px;
+    border-radius: 10px;
+    text-align: center;
+}
+.text:hover {
+    background-color: lightgray;
+}
+.text:hover .vysvetlivka {
+    visibility: visible;
+}

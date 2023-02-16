@@ -1,0 +1,18 @@
+table {
+    border-collapse: collapse;
+}
+td {
+    border: 1px solid black;
+    text-align: center;
+    color: transparent;
+    height: 75px;
+    width: 75px;
+}
+tr:nth-child(2n)>td:nth-child(2n),
+tr:nth-child(2n+1)>td:nth-child(2n+1) {
+    background-color: red;
+}
+tr:nth-child(2n+1)>td:nth-child(2n),
+tr:nth-child(2n)>td:nth-child(2n+1) {
+    background-color: brown;
+}

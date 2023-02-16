@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+.sloupce {
+    float: left;
+    border: 1px solid black;
+    padding: 50px 100px;
+    width: 25%;
+}
+.fajfka {
+    background-color: lightgreen;
+    border: solid green;
+    
+}
+.fajfka:hover {
+    background-color: green;
+    cursor: zoom-in;
+}
+.odfajvka {
+    stroke: green;
+    stroke-width: 10px;
+    stroke-linecap: round;
+    fill: none;
+}
+.fajfka:hover .odfajvka {
+    stroke: lightgreen;
+    fill: none;
+}
+.kriz {
+    background-color: rgb(255, 170, 170);
+    border: solid red;
+}
+.kriz:hover {
+    background-color: red;
+    cursor: zoom-in;
+}
+.vnitrnikriz {
+    stroke: red;
+    stroke-width: 10px;
+    stroke-linecap: round;
+    fill: none;
+}
+.kriz:hover .vnitrnikriz {
+    stroke: rgb(255, 170, 170);
+    fill: none;
+}
+.tricara {
+    background-color: lightgray;
+    border: solid gray;
+}
+.tricara:hover {
+    background-color: gray;
+    border: lightgray;
+}
+.tricara:hover .tricary {
+    stroke: lightgray;
+    fill: none;
+}
+.tricary {
+    stroke: gray;
+    stroke-width: 15px;
+    stroke-linecap: round;
+}
+.domek {
+    background-color: lightgray;
+    border: solid gray;
+}
+.domek:hover {
+    background-color: gray;
+    border: lightgray;
+}
+.domek:hover .strecha {
+    stroke: lightgray;
+    fill: none;
+}
+.domek:hover .steny {
+    stroke: lightgray;
+    fill: none;
+}
+.strecha {
+    stroke: gray;
+    stroke-width: 15px;
+    stroke-linecap: round;
+    fill: none;
+}
+.steny {
+    stroke: gray;
+    stroke-width: 15px;
+    stroke-linecap: round;
+    fill: none;
+}
+.prava {
+    background-color: lightgray;
+    border: solid gray;
+}
+.prava:hover {
+    background-color: gray;
+    border: lightgray;
+}
+.prava:hover .sipka {
+    stroke: lightgray;
+    fill: none;
+}
+.sipka {
+    stroke: gray;
+    stroke-width: 15px;
+    stroke-linecap: round;
+    fill: none;
+}
+@media screen and (max-width:1100px) {
+    .sloupce {
+        width: 50%;
+    }
+    
+}
+@media screen and (max-width:800px) {
+    .sloupce {
+        width: 100%;
+    }
+    
+}

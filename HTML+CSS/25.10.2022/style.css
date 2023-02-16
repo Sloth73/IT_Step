@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+img {
+    width: 425px;
+}
+.galerie {
+   float: left;
+   margin: 20px;
+   position: relative;
+   border: 1px solid black;
+   width: 30%;
+   border-radius: 5px;
+}  
+.galerie img {
+    vertical-align: middle;
+}
+.galerie .popisek {
+    position: absolute;
+    bottom: 0%;
+    padding: 5%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: rgba(0,0, 0, 0.5);
+}
+.galerie .popisek:hover {
+    background-color: rgba(64, 64, 66, 0.5)
+}
+p {
+    text-align: justify;
+}

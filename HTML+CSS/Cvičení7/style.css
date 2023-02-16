@@ -1,0 +1,18 @@
+.svg {
+    background-color: lightgray;
+}
+.polygon {
+    fill: yellow;
+}
+.kruh {
+    fill: lightgray;
+}
+.svg1 {
+    border-radius: 5px;
+    background-color: red;
+}
+.cara {
+    stroke-width: 5px;
+    stroke: white;
+    stroke-linecap: round;
+}

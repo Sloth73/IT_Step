@@ -1,0 +1,48 @@
+@twitter: #60a9de;
+@bg-color: #fff;
+@width: 300px
+@instagram1: linear-gradient(45deg, #405de6, #f77737);
+@instagram2: #833ab4;
+
+
+/*Twitter*/
+.btn-outline-twitter {
+    background: @bg-color;
+    border-color: @twitter;
+    color: @twitter;
+    width: @width;
+}
+.btn-outline-twitter:hover {
+    background: @twitter;
+    color: @bg-color;
+    .twitter-icon {
+        color: @bg-color;
+    }
+}
+
+.twitter-icon {
+    font-size: large;
+    color: @twitter;
+
+}
+/*Facbook*/
+/*Instagram*/
+.btn-outline-instagram {
+    background: @instagram1;
+    border-color: @instagram2;
+    color: @instagram2;
+    width: @width;
+}
+.btn-outline-instagram:hover {
+    background: @twitter;
+    color: @bg-color;
+    .instagram-icon {
+        color: @bg-color;
+    }
+}
+
+.instagram-icon {
+    font-size: large;
+    color: @twitter;
+
+}

@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+.flex-container {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row-reverse;
+    counter-reset: cislovani;
+}
+.flex-item::before {
+    counter-increment: cislovani 5;
+    content: counter(cislovani);
+}
+.flex-item {
+    padding: 50px;
+    width: 20%;
+    border: 1px solid black;
+    text-align: center;
+}
+.flex-item:nth-child(2n) {
+    background-color: antiquewhite;
+}
+.flex-item:nth-child(2n+1) {
+    background-color: rgb(185, 121, 1);
+}
+@media screen and (max-width:800px) {
+    .flex-container {
+        flex-direction: column;
+    }
+    .flex-item {    
+        width: 100%;
+    }
+}
