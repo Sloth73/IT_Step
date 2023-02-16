@@ -1,4 +1,4 @@
-//Functioon that takes length and width of reactangle a calculates area, if just 1 parameter is passed, calculates square 
+//Function that takes length and width of reactangle a calculates area, if just 1 parameter is passed, calculates square.
 
 let result
 function rect(a, b) {
