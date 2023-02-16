@@ -1,4 +1,4 @@
-//Function that combines three separete digits
+//Function that combines three separete digits. 
 
 function combine(a, b, c) {
     let firstNumber = a.toString();
