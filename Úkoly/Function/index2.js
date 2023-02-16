@@ -1,4 +1,4 @@
-//Function that calculate factorial of a number
+//Function that calculate factorial of a number. 
 
 function fact(a) {
     let result = a
