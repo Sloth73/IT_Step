@@ -1,4 +1,4 @@
-// Function that takes two nubers and returns -1 if a < b, 1 if a > b, 0 if a = b.
+// Function that takes two nubers and returns -1 if a < b, 1 if a > b, 0 if a = b. 
 
 function ratio (a,b) {
     if (a < b) {
@@ -14,3 +14,5 @@ function ratio (a,b) {
 console.log(ratio(4,5));
 console.log(ratio(5,4));
 console.log(ratio(5,5));
+
+
