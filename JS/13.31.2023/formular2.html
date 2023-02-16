@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Události focus a blur</title>
+    <style>
+        .cervena {
+            border: 3px solid red;
+        }
+
+        #chyba {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    Zadejte email: <input type="email" id="email">
+
+    <div id="chyba"></div>
+
+    <script>
+        email.addEventListener("blur", () => {
+            if (!email.value.includes("@")) {
+                chyba.textContent = "Vyplňte platný email!";
+                email.classList.add("cervena");
+                //email.focus();
+            } /*else {
+                chyba.textContent = "";
+                email.classList.remove("cervena");
+            }*/
+        });
+
+        email.addEventListener("focus", () => {
+            chyba.textContent = "";
+            email.classList.remove("cervena");
+        })
+    </script>
+</body>
+</html>
+
+události na formulářových políčkách a formuláři:
+
+input a change
+
+submit
+
+focus a blur
+

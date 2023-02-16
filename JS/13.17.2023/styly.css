@@ -1,0 +1,20 @@
+.dark {
+    background-color: black;
+    color: white;
+    
+}
+
+.dark button {
+    background-color: darkblue;
+    color: lightblue;
+}
+
+.dark h1 {
+    background-color: darkgreen;
+    color: lightgreen;
+}
+
+button {
+    font-size: 25px;
+    padding: 7px;
+}

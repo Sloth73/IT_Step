@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request metody</title>
+</head>
+<body>
+     <form method="GET" action="result.html" <!--onsubmit="alert('odesláno'); return false" -->>
+        <label for="jmeno">Jméno:</label>
+        <input type="text" id="jmeno" name="jmeno">
+        <br>
+        <label for="heslo">Heslo:</label>
+        <input type="password" id="heslo" name="heslo">
+        <label for="zmena-barvy">Nastav prohlížeč na fialový</label>
+        <input type="checkbox" id="zmena-barvy" name="zmena">
+        <button>Odešli</button>
+        <div>
+            Obsah políčka jméno:
+            <div id="vnitrni"></div>
+        </div>
+        Barva:
+        <input type="radio" value="orange" name="barva">Oranžová
+        <input type="radio" value="blue" name="barva">Modrá
+        <input type="radio" value="green" name="barva">Zelená
+        <input type="radio" value="" name="barva">Žádná
+    </form>
+        
+        <!-- radio button -->
+    <script>
+        let jmeno = document.querySelector("#jmeno");
+        let vnitrniDiv = document.querySelector("#vnitrni");
+        let checkbox = document.querySelector("#zmena-barvy");
+        let radioButtons = document.querySelectorAll("[name=barva]");
+
+        jmeno.addEventListener("change", () => {
+            console.log(jmeno.value);
+            vnitrniDiv.textContent = jmeno.value;
+        });
+
+        checkbox.addEventListener("input", () => {
+            if (checkbox.checked) {
+                document.body.style.backgroundColor = "purple";
+            } else {
+                document.body.style.backgroundColor = "";
+            }
+        });
+        radioButtons = Array.from(radioButtons);
+        
+        for (let button of radioButtons) {
+            button.addEventListener("change", () => {
+                document.body.style.backgroundColor = button.value;
+            });
+        }
+    </script>
+</body>
+</html>
+<!-- query string se přidává pouze u metody get (což je super pro kopírování adresy kamarádovi
+    nebo do záložek a není to super u hesel)
+GET: www.seznam.cz/formular.html?jmeno=Petr&heslo=tajneheslokbankovnimuuctu
+POST: www.seznam.cz/formular.html -->
+
+result.html?jmeno=Petr&heslo=slon&zmena=on&barva=orange

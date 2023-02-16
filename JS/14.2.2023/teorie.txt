@@ -1,0 +1,10 @@
+OOP
+
+V OOP spojujeme vlastnosti a chování do společných celků.
+
+proměnné -> vlastnost, property, field
+
+funkce -> metoda
+
+
+třída, instance
