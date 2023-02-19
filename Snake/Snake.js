@@ -1,10 +1,15 @@
+//Canvas background style
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
-
-const snakeSize = 50;
 
 ctx.fillStyle = 'white';
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+
+//Snake style
+const snakeSize = 50;
+let snakePositionX = 0;
+let snakePositionY = canvas.height/2 - snakeSize/2
+
 ctx.fillStyle = 'black';
-ctx.fillRect(0, canvas.height/2 - snakeSize/2, snakeSize, snakeSize);
+ctx.fillRect(snakePositionX, snakePositionY, snakeSize, snakeSize);
