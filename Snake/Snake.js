@@ -9,13 +9,31 @@ let snakePositionX = 0;
 let snakePositionY = canvas.height/2 - snakeSize/2
 
 function gameCycle() {
-    ctx.fillStyle = 'white';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.fillStyle = 'black';
-    ctx.fillRect(snakePositionX, snakePositionY, snakeSize, snakeSize);
+    moveWithSnake();
+    drawEverything();
+   
 
     requestAnimationFrame(gameCycle);
 }
 
 gameCycle()
+
+//Moving with snake
+function moveWithSnake() {
+
+    snakePositionX += snakeSpeed
+
+    if (snakePositionX > canvas.width) {
+        snakePositionX = 0
+    }
+   
+}
+//Drawing everything
+function drawEverything() {
+    ctx.fillStyle = 'white';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = 'black';
+    ctx.fillRect(snakePositionX, snakePositionY, snakeSize, snakeSize);
+}
