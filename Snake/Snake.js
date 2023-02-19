@@ -1,3 +1,6 @@
+//Event listener
+document.addEventListener('keydown', whichKey)
+
 //Canvas background style
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
@@ -22,7 +25,7 @@ gameCycle()
 //Moving with snake
 function moveWithSnake() {
 
-    snakePositionX += snakeSpeed
+    //snakePositionX += snakeSpeed
 
     if (snakePositionX > canvas.width) {
         snakePositionX = 0
@@ -36,4 +39,23 @@ function drawEverything() {
 
     ctx.fillStyle = 'black';
     ctx.fillRect(snakePositionX, snakePositionY, snakeSize, snakeSize);
+}
+
+//Keyboard
+function whichKey(event) {
+    switch(event.key) {
+        case 'ArrowUp':
+            snakePositionY -= snakeSpeed;
+            break;
+        case 'ArrowDown':
+            snakePositionY += snakeSpeed;
+            break;
+        case 'ArrowLeft':
+            snakePositionX -= snakeSpeed;
+            break;
+        case 'ArrowRight':
+            snakePositionX += snakeSpeed;
+            break;
+    }
+    
 }
