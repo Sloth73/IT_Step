@@ -7,10 +7,16 @@ const ctx = canvas.getContext('2d');
 
 //Snake style
 const snakeSize = 50;
+
 let snakeSpeed = 5;
+
 let snakePositionX = 0;
 let snakePositionY = canvas.height/2 - snakeSize/2
 
+let movingOnX = 0
+let movingOnY = 0
+
+//Running the game
 function gameCycle() {
 
     moveWithSnake();
@@ -25,7 +31,8 @@ gameCycle()
 //Moving with snake
 function moveWithSnake() {
 
-    //snakePositionX += snakeSpeed
+    snakePositionX += snakeSpeed * movingOnX
+    snakePositionY += snakeSpeed * movingOnY
 
     if (snakePositionX > canvas.width) {
         snakePositionX = 0
@@ -45,16 +52,20 @@ function drawEverything() {
 function whichKey(event) {
     switch(event.key) {
         case 'ArrowUp':
-            snakePositionY -= snakeSpeed;
+            movingOnY = -1;
+            movingOnX = 0;
             break;
         case 'ArrowDown':
-            snakePositionY += snakeSpeed;
+            movingOnY = 1;
+            movingOnX = 0;
             break;
         case 'ArrowLeft':
-            snakePositionX -= snakeSpeed;
+            movingOnX = -1;
+            movingOnY = 0;
             break;
         case 'ArrowRight':
-            snakePositionX += snakeSpeed;
+            movingOnX = 1;
+            movingOnY = 0;
             break;
     }
     
