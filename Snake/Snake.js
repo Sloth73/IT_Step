@@ -5,7 +5,7 @@ document.addEventListener('keydown', whichKey)
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
-//Snake style
+//Snake 
 const snakeSize = 50;
 
 let snakeSpeed = 50;
@@ -22,7 +22,7 @@ function gameCycle() {
     moveWithSnake();
     drawEverything();
    
-
+ 
     setTimeout(gameCycle, 1000/15);
 }
 
@@ -49,9 +49,15 @@ function moveWithSnake() {
 }
 //Drawing everything
 function drawEverything() {
-    ctx.fillStyle = 'white';
+    ctx.fillStyle = 'lightgray';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-
+        for (let i = 0; i < canvas.width / snakeSize; i++) {
+            for (let index = 0; index < canvas.height / snakeSize; index++) {
+                ctx.fillStyle = 'white';
+                ctx.fillRect(snakeSize * i, snakeSize * index, snakeSize - 1, snakeSize - 1);
+            }
+            
+        }
     ctx.fillStyle = 'black';
     ctx.fillRect(snakePositionX, snakePositionY, snakeSize, snakeSize);
 }
