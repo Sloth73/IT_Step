@@ -4,6 +4,7 @@ const ctx = canvas.getContext('2d');
 
 //Snake style
 const snakeSize = 50;
+let snakeSpeed = 5;
 let snakePositionX = 0;
 let snakePositionY = canvas.height/2 - snakeSize/2
 
