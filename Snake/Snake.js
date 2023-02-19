@@ -60,20 +60,28 @@ function drawEverything() {
 function whichKey(event) {
     switch(event.key) {
         case 'ArrowUp':
+            if (movingOnY != 1) {
             movingOnY = -1;
             movingOnX = 0;
+            }
             break;
         case 'ArrowDown':
+            if (movingOnY != -1) {
             movingOnY = 1;
             movingOnX = 0;
+            }
             break;
         case 'ArrowLeft':
+            if (movingOnX != 1) {
             movingOnX = -1;
             movingOnY = 0;
+            }
             break;
         case 'ArrowRight':
+            if (movingOnX != -1) {
             movingOnX = 1;
             movingOnY = 0;
+            }
             break;
     }
     
