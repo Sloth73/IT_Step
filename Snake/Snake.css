@@ -1,0 +1,7 @@
+body {
+    background: lightgray;
+    text-align: center;
+}
+canvas {
+    border: 10px solid gray;
+}
