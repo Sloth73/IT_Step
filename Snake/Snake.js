@@ -17,7 +17,8 @@ let snakePositionY = canvas.height/2 - snakeSize;
 let movingOnX = 0;
 let movingOnY = 0;
 
-let tail = []
+let tail = [];
+let snakeLength = 2;
 
 //Food position
 let foodPositionX = 0;
@@ -64,11 +65,15 @@ function moveWithSnake() {
     if (snakePositionX === foodPositionX && snakePositionY === foodPositionY) {
         score ++
         header.textContent = score;
+        snakeLength ++
         resetFoodPosition();
     }
 
     //tail
     tail.push({x:snakePositionX, y:snakePositionY});
+
+    //Snake length
+    tail = tail.slice(-1 * snakeLength);
 }
 //Drawing everything
 function drawEverything() {
