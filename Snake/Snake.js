@@ -8,13 +8,15 @@ const ctx = canvas.getContext('2d');
 //Snake 
 const snakeSize = 50;
 
-let snakeSpeed = 50;
+let snakeSpeed = snakeSize;
 
 let snakePositionX = 0;
 let snakePositionY = canvas.height/2 - snakeSize;
 
 let movingOnX = 0;
 let movingOnY = 0;
+
+let tail = []
 
 //Food position
 let foodPositionX = 0;
@@ -56,8 +58,11 @@ function moveWithSnake() {
     }
     //Food collision
     if (snakePositionX === foodPositionX && snakePositionY === foodPositionY) {
-        resetFoodPosition()
+        resetFoodPosition();
     }
+
+    //tail
+    tail.push({x:snakePositionX, y:snakePositionY});
 }
 //Drawing everything
 function drawEverything() {
@@ -67,7 +72,11 @@ function drawEverything() {
     
     //Draw grid
     drawGrid();
-        
+
+    //Draw tail
+    tail.forEach(snakePart => 
+        drawRectangle(snakePart.x, snakePart.y, snakeSize, snakeSize, 'gray'))
+
     //Draw snake
     drawRectangle(snakePositionX, snakePositionY, snakeSize, snakeSize, 'black');
 
