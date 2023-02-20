@@ -1,9 +1,9 @@
 body {
-    background: lightgray;
+    background: darkgray;
     text-align: center;
 }
 canvas {
-    border: 10px solid gray;
+    border: 10px solid black;
 }
 h1 {
     font-weight: bold;

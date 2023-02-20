@@ -103,7 +103,7 @@ function drawEverything() {
     drawRectangle(snakePositionX, snakePositionY, tileSize, tileSize, 'black');
 
     //Draw food
-    drawRectangle(foodPositionX, foodPositionY, tileSize, tileSize, 'red');
+    drawRectangle(foodPositionX, foodPositionY, tileSize, tileSize, 'lightblue');
 
 }
 //Keyboard
