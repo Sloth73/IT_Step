@@ -55,7 +55,9 @@ function moveWithSnake() {
         snakePositionY = canvas.height;
     }
     //Food collision
-    resetFoodPosition()
+    if (snakePositionX === foodPositionX && snakePositionY === foodPositionY) {
+        resetFoodPosition()
+    }
 }
 //Drawing everything
 function drawEverything() {
@@ -120,9 +122,8 @@ function drawGrid() {
 
 //Reset food position
 function resetFoodPosition() {
-    if (snakePositionX === foodPositionX && snakePositionY === foodPositionY) {
         foodPositionX = (Math.floor(Math.random() * tileCountX) * snakeSize);
         foodPositionY = (Math.floor(Math.random() * tileCountY) * snakeSize);
-    }
+    
 }
 
