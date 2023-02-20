@@ -36,13 +36,13 @@ function moveWithSnake() {
     if (snakePositionX > canvas.width - snakeSize) {
         snakePositionX = 0;
     }
-    if (snakePositionX < -snakeSize) {
+    if (snakePositionX < 0) {
         snakePositionX = canvas.width;
     }
     if (snakePositionY > canvas.height - snakeSize) {
         snakePositionY = 0;
     }
-    if (snakePositionY < -snakeSize) {
+    if (snakePositionY < 0) {
         snakePositionY = canvas.height;
     }
 }
