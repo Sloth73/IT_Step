@@ -7,12 +7,12 @@ const ctx = canvas.getContext('2d');
 const header = document.querySelector('h1');
 
 //Snake 
-const snakeSize = 50;
+const tileSize = 50;
 
-let snakeSpeed = snakeSize;
+let snakeSpeed = tileSize;
 
 let snakePositionX = 0;
-let snakePositionY = canvas.height/2 - snakeSize;
+let snakePositionY = canvas.height/2 - tileSize;
 
 let movingOnX = 0;
 let movingOnY = 0;
@@ -25,8 +25,8 @@ let foodPositionX = 0;
 let foodPositionY = 0;
 
 //Tile count
-const tileCountX = canvas.width / snakeSize;
-const tileCountY = canvas.height / snakeSize;
+const tileCountX = canvas.width / tileSize;
+const tileCountY = canvas.height / tileSize;
 
 //Score
 let score = 0;
@@ -49,13 +49,13 @@ function moveWithSnake() {
     snakePositionY += snakeSpeed * movingOnY;
 
     //Wall collision
-    if (snakePositionX > canvas.width - snakeSize) {
+    if (snakePositionX > canvas.width - tileSize) {
         snakePositionX = 0;
     }
     if (snakePositionX < 0) {
         snakePositionX = canvas.width;
     }
-    if (snakePositionY > canvas.height - snakeSize) {
+    if (snakePositionY > canvas.height - tileSize) {
         snakePositionY = 0;
     }
     if (snakePositionY < 0) {
@@ -86,13 +86,13 @@ function drawEverything() {
 
     //Draw tail
     tail.forEach(snakePart => 
-        drawRectangle(snakePart.x, snakePart.y, snakeSize, snakeSize, 'gray'))
+        drawRectangle(snakePart.x, snakePart.y, tileSize, tileSize, 'gray'))
 
     //Draw snake
-    drawRectangle(snakePositionX, snakePositionY, snakeSize, snakeSize, 'black');
+    drawRectangle(snakePositionX, snakePositionY, tileSize, tileSize, 'black');
 
     //Draw food
-    drawRectangle(foodPositionX, foodPositionY, snakeSize, snakeSize, 'red');
+    drawRectangle(foodPositionX, foodPositionY, tileSize, tileSize, 'red');
 
 }
 //Keyboard
@@ -133,17 +133,17 @@ function drawRectangle(x, y, width, height, color) {
 
 //Draw grid
 function drawGrid() {
-    for (let i = 0; i < canvas.width / snakeSize; i++) {
-        for (let index = 0; index < canvas.height / snakeSize; index++) {
-            drawRectangle(snakeSize * i, snakeSize * index, snakeSize - 1, snakeSize - 1, 'white');
+    for (let i = 0; i < canvas.width / tileSize; i++) {
+        for (let index = 0; index < canvas.height / tileSize; index++) {
+            drawRectangle(tileSize * i, tileSize * index, tileSize - 1, tileSize - 1, 'white');
         } 
     }           
 }
 
 //Reset food position
 function resetFoodPosition() {
-        foodPositionX = (Math.floor(Math.random() * tileCountX) * snakeSize);
-        foodPositionY = (Math.floor(Math.random() * tileCountY) * snakeSize);
+        foodPositionX = (Math.floor(Math.random() * tileCountX) * tileSize);
+        foodPositionY = (Math.floor(Math.random() * tileCountY) * tileSize);
     
 }
 
