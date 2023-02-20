@@ -18,7 +18,7 @@ let movingOnX = 0;
 let movingOnY = 0;
 
 let tail = [];
-let snakeLength = 2;
+let snakeLength = 1;
 
 //Food position
 let foodPositionX = 0;
@@ -69,8 +69,15 @@ function moveWithSnake() {
         resetFoodPosition();
     }
 
+    //Self collision
+    tail.forEach(snakePart => {
+        if (snakePositionX === snakePart.x && snakePositionY === snakePart.y && score != 0) {
+            alert('Game Over!')
+        }
+    });
+        
     //tail
-    tail.push({x:snakePositionX, y:snakePositionY});
+    tail.push({x: snakePositionX, y: snakePositionY});
 
     //Snake length
     tail = tail.slice(-1 * snakeLength);
@@ -146,4 +153,3 @@ function resetFoodPosition() {
         foodPositionY = (Math.floor(Math.random() * tileCountY) * tileSize);
     
 }
-
