@@ -37,6 +37,7 @@ function moveWithSnake() {
     snakePositionX += snakeSpeed * movingOnX;
     snakePositionY += snakeSpeed * movingOnY;
 
+    //Wall collision
     if (snakePositionX > canvas.width - snakeSize) {
         snakePositionX = 0;
     }
@@ -48,6 +49,11 @@ function moveWithSnake() {
     }
     if (snakePositionY < 0) {
         snakePositionY = canvas.height;
+    }
+    //Food collision
+    if (snakePositionX === foodPositionX && snakePositionY === foodPositionY) {
+        foodPositionX = (Math.floor(Math.random() * canvas.width / snakeSize) * snakeSize);
+        foodPositionY = (Math.floor(Math.random() * canvas.width / snakeSize) * snakeSize);
     }
 }
 //Drawing everything
