@@ -1,5 +1,5 @@
 //Event listener
-document.addEventListener('keydown', whichKey)
+document.addEventListener('keydown', whichKey);
 
 //Canvas background style
 const canvas = document.querySelector('canvas');
@@ -11,10 +11,14 @@ const snakeSize = 50;
 let snakeSpeed = 50;
 
 let snakePositionX = 0;
-let snakePositionY = canvas.height/2 - snakeSize
+let snakePositionY = canvas.height/2 - snakeSize;
 
-let movingOnX = 0
-let movingOnY = 0
+let movingOnX = 0;
+let movingOnY = 0;
+
+//Food position
+let foodPositionX = 100;
+let foodPositionY = 100;
 
 //Running the game
 function gameCycle() {
@@ -30,8 +34,8 @@ gameCycle()
 //Moving with snake
 function moveWithSnake() {
 
-    snakePositionX += snakeSpeed * movingOnX
-    snakePositionY += snakeSpeed * movingOnY
+    snakePositionX += snakeSpeed * movingOnX;
+    snakePositionY += snakeSpeed * movingOnY;
 
     if (snakePositionX > canvas.width - snakeSize) {
         snakePositionX = 0;
@@ -53,10 +57,13 @@ function drawEverything() {
     drawRectangle(0, 0, canvas.width, canvas.height, 'lightgray');
     
     //Draw grid
-    drawGrid()
+    drawGrid();
         
     //Draw snake
-    drawRectangle(snakePositionX, snakePositionY, snakeSize, snakeSize, 'black')
+    drawRectangle(snakePositionX, snakePositionY, snakeSize, snakeSize, 'black');
+
+    //Draw food
+    drawRectangle(foodPositionX, foodPositionY, snakeSize, snakeSize, 'red');
 
 }
 //Keyboard
@@ -103,3 +110,4 @@ function drawGrid() {
         } 
     }           
 }
+
