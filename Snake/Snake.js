@@ -49,14 +49,14 @@ function moveWithSnake() {
 }
 //Drawing everything
 function drawEverything() {
+
+    //Draw Canvas
     drawRectangle(0, 0, canvas.width, canvas.height, 'lightgray');
     
-        for (let i = 0; i < canvas.width / snakeSize; i++) {
-            for (let index = 0; index < canvas.height / snakeSize; index++) {
-                drawRectangle(snakeSize * i, snakeSize * index, snakeSize - 1, snakeSize - 1, 'white');
-            }            
-        }
-
+    //Draw grid
+    drawGrid()
+        
+    //Draw snake
     drawRectangle(snakePositionX, snakePositionY, snakeSize, snakeSize, 'black')
 
 }
@@ -94,4 +94,13 @@ function whichKey(event) {
 function drawRectangle(x, y, width, height, color) {
     ctx.fillStyle = color;
     ctx.fillRect(x, y, width, height);
+}
+
+//Draw grid
+function drawGrid() {
+    for (let i = 0; i < canvas.width / snakeSize; i++) {
+        for (let index = 0; index < canvas.height / snakeSize; index++) {
+            drawRectangle(snakeSize * i, snakeSize * index, snakeSize - 1, snakeSize - 1, 'white');
+        } 
+    }           
 }
