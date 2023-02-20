@@ -5,3 +5,8 @@ body {
 canvas {
     border: 10px solid gray;
 }
+h1 {
+    font-weight: bold;
+    font-size: 40px;
+    margin-top: 10px;
+}
