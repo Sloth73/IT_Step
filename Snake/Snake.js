@@ -11,7 +11,7 @@ const snakeSize = 50;
 let snakeSpeed = 50;
 
 let snakePositionX = 0;
-let snakePositionY = canvas.height/2 - snakeSize/2
+let snakePositionY = canvas.height/2 - snakeSize
 
 let movingOnX = 0
 let movingOnY = 0
@@ -49,19 +49,17 @@ function moveWithSnake() {
 }
 //Drawing everything
 function drawEverything() {
-    ctx.fillStyle = 'lightgray';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    drawRectangle(0, 0, canvas.width, canvas.height, 'lightgray');
+    
         for (let i = 0; i < canvas.width / snakeSize; i++) {
             for (let index = 0; index < canvas.height / snakeSize; index++) {
-                ctx.fillStyle = 'white';
-                ctx.fillRect(snakeSize * i, snakeSize * index, snakeSize - 1, snakeSize - 1);
-            }
-            
+                drawRectangle(snakeSize * i, snakeSize * index, snakeSize - 1, snakeSize - 1, 'white');
+            }            
         }
-    ctx.fillStyle = 'black';
-    ctx.fillRect(snakePositionX, snakePositionY, snakeSize, snakeSize);
-}
 
+    drawRectangle(snakePositionX, snakePositionY, snakeSize, snakeSize, 'black')
+
+}
 //Keyboard
 function whichKey(event) {
     switch(event.key) {
@@ -90,5 +88,10 @@ function whichKey(event) {
             }
             break;
     }
-    
+}
+
+//Draw rectangle
+function drawRectangle(x, y, width, height, color) {
+    ctx.fillStyle = color;
+    ctx.fillRect(x, y, width, height);
 }
