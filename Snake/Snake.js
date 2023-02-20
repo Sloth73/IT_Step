@@ -22,7 +22,6 @@ function gameCycle() {
     moveWithSnake();
     drawEverything();
    
- 
     setTimeout(gameCycle, 1000/15);
 }
 
@@ -34,13 +33,13 @@ function moveWithSnake() {
     snakePositionX += snakeSpeed * movingOnX
     snakePositionY += snakeSpeed * movingOnY
 
-    if (snakePositionX > canvas.width) {
+    if (snakePositionX > canvas.width - snakeSize) {
         snakePositionX = 0;
     }
     if (snakePositionX < -snakeSize) {
         snakePositionX = canvas.width;
     }
-    if (snakePositionY > canvas.height) {
+    if (snakePositionY > canvas.height - snakeSize) {
         snakePositionY = 0;
     }
     if (snakePositionY < -snakeSize) {
