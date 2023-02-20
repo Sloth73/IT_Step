@@ -4,6 +4,7 @@ document.addEventListener('keydown', whichKey);
 //Canvas background style
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
+const header = document.querySelector('h1');
 
 //Snake 
 const snakeSize = 50;
@@ -22,9 +23,12 @@ let tail = []
 let foodPositionX = 0;
 let foodPositionY = 0;
 
-//tile count
+//Tile count
 const tileCountX = canvas.width / snakeSize;
 const tileCountY = canvas.height / snakeSize;
+
+//Score
+let score = 0;
 
 //Running the game
 function gameCycle() {
@@ -58,6 +62,8 @@ function moveWithSnake() {
     }
     //Food collision
     if (snakePositionX === foodPositionX && snakePositionY === foodPositionY) {
+        score ++
+        header.textContent = score;
         resetFoodPosition();
     }
 
