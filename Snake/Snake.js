@@ -20,6 +20,10 @@ let movingOnY = 0;
 let foodPositionX = 100;
 let foodPositionY = 100;
 
+//tile count
+const tileCountX = canvas.width / snakeSize;
+const tileCountY = canvas.height / snakeSize;
+
 //Running the game
 function gameCycle() {
 
@@ -52,8 +56,8 @@ function moveWithSnake() {
     }
     //Food collision
     if (snakePositionX === foodPositionX && snakePositionY === foodPositionY) {
-        foodPositionX = (Math.floor(Math.random() * canvas.width / snakeSize) * snakeSize);
-        foodPositionY = (Math.floor(Math.random() * canvas.width / snakeSize) * snakeSize);
+        foodPositionX = (Math.floor(Math.random() * tileCountX) * snakeSize);
+        foodPositionY = (Math.floor(Math.random() * tileCountY) * snakeSize);
     }
 }
 //Drawing everything
